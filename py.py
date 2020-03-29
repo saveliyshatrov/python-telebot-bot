@@ -13,7 +13,7 @@ apihelper.proxy = {
 
 """print(apihelper.proxy)"""
 
-bot = telebot.TeleBot('1132412619:AAFk-IMvCm3aZsf-sS_Q4etm3Hcz-f0_E-A')
+bot = telebot.TeleBot('your token here')
 
 Main_Keyboard = telebot.types.ReplyKeyboardMarkup()
 fast_buy = telebot.types.KeyboardButton('Быстрое решение')
