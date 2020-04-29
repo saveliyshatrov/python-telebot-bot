@@ -4,7 +4,7 @@ import time
 import random
 import json
 
-bot = telebot.TeleBot('1132412619:AAFk-IMvCm3aZsf-sS_Q4etm3Hcz-f0_E-A')
+bot = telebot.TeleBot('YOUR_TOKEN_HERE')
 
 
 def CreateKeyboard(ArrayOfButtons):
