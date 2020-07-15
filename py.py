@@ -1,10 +1,9 @@
 import telebot
-"""from telebot import apihelper"""
 import time
 import random
 import json
 
-bot = telebot.TeleBot('YOUR_TOKEN_HERE')
+bot = telebot.TeleBot('1132412619:AAFk-IMvCm3aZsf-sS_Q4etm3Hcz-f0_E-A')
 
 
 def CreateKeyboard(ArrayOfButtons):
@@ -40,10 +39,6 @@ Help = CreateKeyboard([
     ['В главное меню']
 ])
 
-MY_ID = 133907668
-ANN_ID = 287201315
-ARTUR_ID = 617071251
-
 
 @bot.message_handler(commands=['start'])
 def start_message(message):
@@ -53,9 +48,7 @@ def start_message(message):
 @bot.message_handler(content_types=['text'])
 def send_text(message):
     if message.text == 'Быстрое решение':
-        bot.send_message(MY_ID, 'Хотят купить подписку')
-        random_number = str(random.randrange(10, 30, 1)/10)
-        bot.send_message(message.chat.id, 'Выбери тариф и коеффицент цены сейчас x' + str(random_number), reply_markup = Fast_decision)
+        bot.send_message(message.chat.id, 'Выбери тариф', reply_markup = Fast_decision)
 
     elif message.text == 'Тарифы':
         bot.send_message(message.chat.id, 'Тарифы', reply_markup = Tarifs)
@@ -71,10 +64,6 @@ def send_text(message):
 
     elif message.text == 'В главное меню':
         bot.send_message(message.chat.id, '⬅', reply_markup = Main_Keyboard)
-
-    else:
-        print(message.text)
-        bot.send_message(ANN_ID, message.text)
 
 
 bot.polling(none_stop=True)

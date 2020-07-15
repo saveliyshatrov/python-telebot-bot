@@ -1,1 +1,1 @@
-# python-telebot-bot + ProtonVPN
+# python-telebot-bot
